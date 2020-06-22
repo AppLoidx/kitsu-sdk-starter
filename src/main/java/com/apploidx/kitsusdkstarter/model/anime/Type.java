@@ -6,11 +6,11 @@ import com.fasterxml.jackson.annotation.JsonValue;
 /**
  * @author Arthur Kupriyanov on 21.06.2020
  */
-public enum  Type {
+public enum Type {
     ONA, OVA, TV,
     MOVIE,
-    MUSIC ("music"),
-    SPECIAL ("special");
+    MUSIC("music"),
+    SPECIAL("special");
 
     Type() {
         this.key = this.name();

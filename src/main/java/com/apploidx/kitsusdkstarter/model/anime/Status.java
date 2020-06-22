@@ -9,9 +9,9 @@ import com.fasterxml.jackson.annotation.JsonValue;
 public enum Status {
     CURRENT("current"),
     FINISHED("finished"),
-    TBA ("tba"),
-    UNRELEASED ("unreleased"),
-    UPCOMING ("upcoming");
+    TBA("tba"),
+    UNRELEASED("unreleased"),
+    UPCOMING("upcoming");
 
     private final String key;
 
