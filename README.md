@@ -5,7 +5,6 @@
 
 ## Simple preview start
 
-
 ### Dependency
 Add dependency:
 ```xml
@@ -50,3 +49,7 @@ public class AnimeController {
     }
 }
 ```
+
+## Kitsu API
+
+This unofficial library uses open [Kitsu API](https://github.com/hummingbird-me/api-docs)
