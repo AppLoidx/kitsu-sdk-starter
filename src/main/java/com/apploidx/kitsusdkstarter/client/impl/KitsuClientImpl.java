@@ -2,6 +2,7 @@ package com.apploidx.kitsusdkstarter.client.impl;
 
 import com.apploidx.kitsusdkstarter.client.KitsuClient;
 import com.apploidx.kitsusdkstarter.http.KitsuHttpTransport;
+import com.apploidx.kitsusdkstarter.model.KitsuResponse;
 import com.apploidx.kitsusdkstarter.model.anime.Anime;
 import com.apploidx.kitsusdkstarter.model.anime.AnimeResponse;
 import com.apploidx.kitsusdkstarter.model.anime.Episodes;
@@ -9,6 +10,7 @@ import com.apploidx.kitsusdkstarter.model.anime.EpisodesResponse;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.stream.Collectors;
 
 /**
  * @author Arthur Kupriyanov on 21.06.2020
@@ -34,6 +36,7 @@ public class KitsuClientImpl implements KitsuClient {
 
     @Override
     public List<Anime> fetchTrendingAnime() {
-        return null;
+        return kitsuHttpTransport.fetchTrendingAnime().getData().stream()
+                .map(KitsuResponse.Data::getAttributes).collect(Collectors.toList());
     }
 }
