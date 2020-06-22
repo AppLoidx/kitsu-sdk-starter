@@ -25,8 +25,6 @@ class KitsuHttpTransportTest {
 
     @Test
     public void test() {
-        AnimeTrendingResponse resp = kitsuHttpTransport.fetchTrendingAnime();
-        resp.getData().stream().map(Object::toString).forEach(log::info);
     }
 
 }
