@@ -30,9 +30,9 @@ public class KitsuHttpTransport {
         headers.set("Accept", "application/vnd.api+json");
         HttpEntity<String> req = new HttpEntity<>(headers);
         if (clazz == AnimeResponse.class) {
-            return restTemplate.exchange("%s/%s/%d".formatted(API_PATH, ANIME_ENDPOINT, id), HttpMethod.GET, req, clazz).getBody();
+            return restTemplate.exchange(String.format("%s/%s/%d", API_PATH, ANIME_ENDPOINT, id), HttpMethod.GET, req, clazz).getBody();
         } else if (clazz == EpisodesResponse.class) {
-            return restTemplate.getForEntity("%s/%s/%d".formatted(API_PATH, EPISODES_ENDPOINT, id), clazz).getBody();
+            return restTemplate.getForEntity(String.format("%s/%s/%d", API_PATH, EPISODES_ENDPOINT, id), clazz).getBody();
         } else {
             throw new IllegalArgumentException("Can't handle passed class " + clazz.getCanonicalName());
         }
