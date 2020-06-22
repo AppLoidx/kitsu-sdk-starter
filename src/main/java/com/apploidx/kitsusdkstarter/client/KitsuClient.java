@@ -10,6 +10,8 @@ import java.util.List;
  */
 public interface KitsuClient {
     Anime fetchAnime(int id);
+
     Episodes fetchEpisodes(int id);
+
     List<Anime> fetchTrendingAnime();
 }

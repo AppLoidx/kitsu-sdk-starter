@@ -8,11 +8,12 @@ import lombok.ToString;
  */
 @Getter
 @ToString
-public class KitsuResponse<T>{
+public class KitsuResponse<T> {
     Data<T> data;
 
     @Getter
-    private final static class Data<T> {
+    @ToString
+    public final static class Data<T> {
         T attributes;
     }
 
