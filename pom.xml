@@ -11,7 +11,7 @@
 
     <groupId>com.apploidx</groupId>
     <artifactId>kitsu-spring-boot-starter</artifactId>
-    <version>0.0.3-ALPHA</version>
+    <version>0.1.0-ALPHA</version>
     <name>kitsu-sdk-starter</name>
     <description>Starter for Kitsu API SDK</description>
 
