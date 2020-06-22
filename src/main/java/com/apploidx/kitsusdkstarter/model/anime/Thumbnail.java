@@ -1,9 +1,11 @@
 package com.apploidx.kitsusdkstarter.model.anime;
 
+import lombok.Data;
+
 /**
  * @author Arthur Kupriyanov on 21.06.2020
  */
-public record Thumbnail(
-        String original
-) {
+@Data
+public class Thumbnail {
+    private String original;
 }

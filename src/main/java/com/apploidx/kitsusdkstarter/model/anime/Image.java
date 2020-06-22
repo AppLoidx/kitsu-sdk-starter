@@ -1,13 +1,15 @@
 package com.apploidx.kitsusdkstarter.model.anime;
 
+import lombok.Data;
+
 /**
  * @author Arthur Kupriyanov on 21.06.2020
  */
-public record Image(
-        String tiny,
-        String small,
-        String medium,
-        String large,
-        String original
-) {
+@Data
+public class Image {
+    private String tiny;
+    private String small;
+    private String medium;
+    private String large;
+    private String original;
 }
